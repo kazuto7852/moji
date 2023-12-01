@@ -12,7 +12,7 @@ void makeF(char d[8][9],int row,int col) {
 	for (int r = 0; r < row; r++) {
 		for (int c = 0; c < col; c++) {
 			if (d[r][c] == '1') {
-				printf("*");
+				printf(" *");
 			}
 			else {
 				printf(" ");
@@ -24,10 +24,10 @@ void makeF(char d[8][9],int row,int col) {
 }
 
 void revolution(char d[8][9], int row, int col) {
-	for (int r = 0; r < row; r++) {
-		for (int c = 0; c < col; c++) {
+	for (int c = col; c >= 0; c--) {
+		for (int r = 0; r < row; r++) {
 			if (d[r][c] == '1') {
-				printf("*");
+				printf(" *");
 			}
 			else {
 				printf(" ");
@@ -35,6 +35,7 @@ void revolution(char d[8][9], int row, int col) {
 		}
 		printf("\n");
 	}
+	printf("\n");
 }
 
 int main() {
